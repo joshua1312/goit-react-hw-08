@@ -1,0 +1,23 @@
+.sectionHome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 110px);
+    text-align: center;
+}
+
+.titleHome {
+    font-size: 48px;
+    color: #333;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    background: linear-gradient(135deg, grey, lightgray);
+    color: #fff;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.titleHome span {
+    margin-left: 10px;
+}
