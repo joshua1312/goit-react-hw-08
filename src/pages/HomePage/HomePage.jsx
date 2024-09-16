@@ -8,10 +8,7 @@ export default function HomePage() {
 
             <div className={css.sectionHome}>
                 <h1 className={css.titleHome}>
-                    Contacts welcome page{' '}
-                    <span role="img" aria-label="Greeting icon">
-                        💁‍♀️
-                    </span>
+                    Contacts manager welcome page{' '}
                 </h1>
             </div>
         </>

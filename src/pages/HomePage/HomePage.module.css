@@ -8,16 +8,9 @@
 
 .titleHome {
     font-size: 48px;
-    color: #333;
+    color: grey;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    background: linear-gradient(135deg, grey, lightgray);
-    color: #fff;
-    border-radius: 8px;
+    background: white;
     display: inline-block;
-}
-
-.titleHome span {
-    margin-left: 10px;
 }
