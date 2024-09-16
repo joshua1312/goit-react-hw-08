@@ -5,7 +5,7 @@
     max-width: 300px;
     gap: 15px;
     border: 1px solid #000000aa;
-    border-radius: 4px;
+    border-radius: 5px;
     padding: 10px;
     margin-bottom: 25px;
 }
@@ -20,6 +20,7 @@
     border: 1px solid #0000009c;
     border-radius: 5px;
     padding: 6px;
+    font-size: 18px;
 }
 
 .error {
@@ -28,7 +29,6 @@
 
 .btnContactForm {
     display: block;
-    /* width: 100px; */
     padding: 5px;
     border: 1px solid #0000008f;
     border-radius: 5px;

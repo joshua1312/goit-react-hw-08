@@ -3,7 +3,8 @@ import * as Yup from 'yup';
 import { ErrorMessage } from 'formik';
 import { useId } from 'react';
 import { useDispatch } from 'react-redux';
-import { addContact } from '../../redux/contactsOps';
+import { addContact } from '../../redux/contacts/operations';
+import { toast } from 'react-hot-toast';
 import css from './ContactForm.module.css';
 
 const ContactForm = () => {
@@ -18,8 +19,8 @@ const ContactForm = () => {
             .required('Required'),
         number: Yup.string()
             .matches(
-                /^\d{10}$/,
-                'Phone number is not valid.',
+                /^\d{3}-\d{2}-\d{2}$/,
+                'Phone number is not valid. Format should be 123-45-67',
             )
             .required('Required'),
     });
@@ -34,7 +35,20 @@ const ContactForm = () => {
             name: values.name,
             number: values.number,
         };
-        dispatch(addContact(newContact));
+        dispatch(addContact(newContact))
+            .unwrap()
+            .then(() => {
+                toast.success('Contact added successfully!', {
+                    duration: 4000,
+                    position: 'top-right',
+                });
+            })
+            .catch(() => {
+                toast.error('Failed to add contact', {
+                    duration: 4000,
+                    position: 'top-right',
+                });
+            });
         actions.resetForm();
     };
 
